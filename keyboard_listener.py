@@ -1,7 +1,9 @@
 import pynput
 
+
 from lights_controller import toggle_group, light_set, light_brightness
 from config import Selection_Url, State
+
 
 # starting default
 selection = Selection_Url.desk
