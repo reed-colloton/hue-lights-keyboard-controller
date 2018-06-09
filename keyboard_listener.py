@@ -28,9 +28,9 @@ def key_pressed(key):
         toggle_group(selection=selection)
 
     # sets group
-    elif keycode == "left": set_group(selection=Selection_Url.bedroom)
-    elif keycode == "right": set_group(selection=Selection_Url.desk)
-    elif keycode == "tab": set_group(selection=Selection_Url.every)
+    elif keycode == "left": selection = Selection_Url.bedroom
+    elif keycode == "right": selection = Selection_Url.desk
+    elif keycode == "tab": selection = Selection_Url.every
 
     # brightness control
     elif keycode == "up": light_brightness(selection=selection, direction="down")
