@@ -16,5 +16,5 @@ class State:
 
 class Selection_Url:
     desk = '/groups/2/'
-    bed = '/groups/1/'
+    bedroom = '/groups/1/'
     every = '/groups/0/'

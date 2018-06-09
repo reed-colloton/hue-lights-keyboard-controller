@@ -28,7 +28,7 @@ def light_brightness(selection, direction):
 def light_set(selection, data):
     """sets the chosen light group to the chosen state"""
     r = requests.put(BRIDGE_URL + selection+ 'action', data=data)
-    print("\nSetting {selection} lights to {data}...\n".format(selection=selection, data=data))
+    # print("\nSetting {selection} lights to {data}...\n".format(selection=selection, data=data))
 
 
 def toggle_group(selection):
