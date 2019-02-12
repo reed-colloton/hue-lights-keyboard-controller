@@ -1,7 +1,7 @@
 
 # hue bridge global constants for api
-BRIDGE_USER = 'kSsIPvmHKBqj30NDIOOTHe-ng3xks2QQNjeVx8za'
-BRIDGE_URL = 'http://192.168.86.60/api/{}'.format(BRIDGE_USER)
+BRIDGE_USER = 'MK3jG8ecIDzlApeKfFRdCVqZsG5hBY7QG3XDSxjT'
+BRIDGE_URL = 'http://192.168.1.94/api{}'.format(BRIDGE_USER)
 
 class State:
     """data inputs for setting state of lights"""

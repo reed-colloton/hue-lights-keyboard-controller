@@ -10,6 +10,7 @@ selection = Selection_Url.desk
 
 
 def key_pressed(key):
+    print(str(key))
     """responds to calls from the listener with the defined action"""
 
     # coverts pynput object to string
