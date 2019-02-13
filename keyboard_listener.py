@@ -28,7 +28,7 @@ def key_pressed(key):
         toggle_group(selection=selection)
 
     # sets group
-    elif keycode == "insert" or keycode== "\x05": selection = Selection_Url.bedroom
+    elif keycode == "insert": selection = Selection_Url.bedroom
     elif keycode == "delete": selection = Selection_Url.desk
     elif keycode == "tab": selection = Selection_Url.every
 
@@ -37,9 +37,9 @@ def key_pressed(key):
     elif keycode == "-": light_brightness(selection=selection, direction="up")
 
     # set light state/scene/hue
-    elif keycode == "3": light_set(selection=selection, data=State.relax)
-    elif keycode == "2": light_set(selection=selection, data=State.read)
-    elif keycode == "1": light_set(selection=selection, data=State.concentrate)
+    elif keycode == "3" or keycode == "page_down": light_set(selection=selection, data=State.relax)
+    elif keycode == "2" or keycode == "down": light_set(selection=selection, data=State.read)
+    elif keycode == "1" or keycode == "end": light_set(selection=selection, data=State.concentrate)
 
 
 def main_listener():
