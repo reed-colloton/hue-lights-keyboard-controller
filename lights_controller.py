@@ -13,8 +13,8 @@ def light_is_on(selection):
 def light_brightness(selection, direction):
     """gets current light brightness and sets the light to a higher or lower brightness"""
     # adds or subtracts 50 to brightness depending on arrow direction
-    if direction == "down": brightness = requests.get(BRIDGE_URL+selection).json()["action"]["bri"] + 50
-    elif direction == "up": brightness = requests.get(BRIDGE_URL+selection).json()["action"]["bri"] - 50
+    if direction == "down": brightness = requests.get(BRIDGE_URL+selection).json()["action"]["bri"] - 50
+    elif direction == "up": brightness = requests.get(BRIDGE_URL+selection).json()["action"]["bri"] + 50
     else: print("Error")
 
     # makes sure brightness is within the allowed range of 1-254 inclusive
