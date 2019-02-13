@@ -25,17 +25,16 @@ def key_pressed(key):
 
     # toggle on/off current group
     if keycode == "enter":
-        print(1)
         toggle_group(selection=selection)
 
     # sets group
-    elif keycode == "right": selection = Selection_Url.bedroom
-    elif keycode == "left": selection = Selection_Url.desk
+    elif keycode == "insert" or keycode== "\x05": selection = Selection_Url.bedroom
+    elif keycode == "delete": selection = Selection_Url.desk
     elif keycode == "tab": selection = Selection_Url.every
 
     # brightness control
-    elif keycode == "up": light_brightness(selection=selection, direction="down")
-    elif keycode == "down": light_brightness(selection=selection, direction="up")
+    elif keycode == "+": light_brightness(selection=selection, direction="down") # plus and minus are flipped b/c on keypad they are 
+    elif keycode == "-": light_brightness(selection=selection, direction="up")
 
     # set light state/scene/hue
     elif keycode == "3": light_set(selection=selection, data=State.relax)
