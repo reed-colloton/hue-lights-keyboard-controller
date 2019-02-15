@@ -10,7 +10,7 @@ selection = Selection_Url.desk
 
 
 def key_pressed(key):
-    print(str(key))
+    # print(str(key))
     """responds to calls from the listener with the defined action"""
 
     # coverts pynput object to string
@@ -40,6 +40,9 @@ def key_pressed(key):
     elif keycode == "3" or keycode == "page_down": light_set(selection=selection, data=State.relax)
     elif keycode == "2" or keycode == "down": light_set(selection=selection, data=State.read)
     elif keycode == "1" or keycode == "end": light_set(selection=selection, data=State.concentrate)
+
+    # to quit
+    if keycode == "q": return False # will quit listener and so then program
 
 
 def main_listener():
